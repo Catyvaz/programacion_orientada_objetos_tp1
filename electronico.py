@@ -9,5 +9,5 @@ class Electronico(Productos):
         return self.modelo
 
     def mostrarDatos(self):
-        print(f"El producto ¨{self.nombre}¨, marca ¨{self.getMarca}¨ y modelo ¨{self.getModelo}¨") 
-        print(f"Tiene precio ${str(self.precio)} y hay una cantidad de {str(self.cantidad)}")
+        print(f"El producto ¨{self.nombre}¨, marca ¨{self.marca}¨ y modelo ¨{self.modelo}¨") 
+        print(f"Tiene un precio de ${str(self.precio)} y hay una cantidad de {str(self.cantidad)}")
