@@ -1,9 +1,11 @@
 from producto import *
 
 class Alimentos(Productos):
-    def getFechaExpiracion(self, expiracion):
-        self.expiracion = expiracion
-        return self.expiracion
+    def get_expiracion(self, fecha_expiracion):
+        self.fecha_expiracion = fecha_expiracion
+        return self.fecha_expiracion
 
-    def mostrarDatos(self):
-        print(f"El producto ¨{self.nombre}¨ tiene un precio de ${str(self.precio)} y hay una cantidad de {str(self.cantidad)}, con fecha de expiración para {self.expiracion}")
+    def mostrar_informacion(self):
+        super().__init__(self.nombre, self.precio, self.cantidad)
+        super().mostrar_informacion()
+        return f"Fecha de expiración: {str(self.fecha_expiracion)}\n "

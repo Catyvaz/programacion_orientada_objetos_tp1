@@ -2,26 +2,33 @@ from producto import *
 from electronico import *
 from alimento import *
 
-info = input("¿Que tipo de producto es? A = alimento o E = electronico. \n ==>")
-if info.lower() == "a":
-    nombre = input("Nombre del producto = ")
-    precio = input("Precio del producto = ")
-    cantidad = input("Cantidad del producto = ")
-    expira = input("Fecha de expiración del producto = ")
+#Defino las variables para mas facilidad 
+nombreA = "Fideos"
+nombreE = "Televisor" 
+precio = 1500 
+cantidad = 56
+expiracion = "15/8/25"
+marca = "Samsung"
+modelo = "Smart tv 2020"
 
-    datos = Alimentos(nombre, precio, cantidad)
-    datos.getFechaExpiracion(expira)
-    datos.mostrarDatos()
+#Solo muestra datos de un producto
+datos = Productos(nombreA, precio, cantidad)
+print(">> Producto <<")
+datos.mostrar_informacion()
 
-if info.lower() == "e":
-    nombre = input("Nombre del producto = ")
-    precio = input("Precio del producto = ")
-    cantidad = input("Cantidad del producto = ")
-    marca = input("Marca del producto = ")
-    modelo = input("Modelo del producto = ")
+print("#######################################")
 
-    datos = Electronico(nombre, precio, cantidad)
-    datos.getMarca(marca)
-    datos.getModelo(modelo)
-    datos.mostrarDatos()
+#Muestra los datos de un alimento
+datos = Alimentos(nombreA, precio, cantidad)
+datos.get_expiracion(expiracion)
+print(">> Producto Alimento <<")
+print(datos.mostrar_informacion())
+
+print("#######################################")
+
+datos = Electronico(nombreE, precio, cantidad)
+datos.get_marca(marca)
+datos.get_modelo(modelo)
+print(">> Producto Electronico <<")
+print(datos.mostrar_informacion())
 
