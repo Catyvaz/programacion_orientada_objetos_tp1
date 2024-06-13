@@ -7,4 +7,4 @@ class Productos:
 
     #Se imprimen los datos nombre, precio y cantidad en la terminal
     def mostrar_informacion(self):
-        print(f"Producto: {self.nombre} \nPrecio: $ {str(self.precio)} \nCantidad: {str(self.cantidad)}")
+        print(f"Nombre: {self.nombre} \nPrecio: $ {str(self.precio)} \nCantidad: {str(self.cantidad)}")
