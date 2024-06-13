@@ -16,19 +16,22 @@ datos = Productos(nombreA, precio, cantidad)
 print(">> Producto <<")
 datos.mostrar_informacion()
 
+print("")
 print("#######################################")
+print("")
 
 #Muestra los datos de un alimento
-datos = Alimentos(nombreA, precio, cantidad)
+datos = Alimento(nombreA, precio, cantidad)
 datos.get_expiracion(expiracion)
 print(">> Producto Alimento <<")
 print(datos.mostrar_informacion())
 
 print("#######################################")
+print("")
 
+#Muestra los datos de un electronico
 datos = Electronico(nombreE, precio, cantidad)
 datos.get_marca(marca)
 datos.get_modelo(modelo)
 print(">> Producto Electronico <<")
 print(datos.mostrar_informacion())
-
